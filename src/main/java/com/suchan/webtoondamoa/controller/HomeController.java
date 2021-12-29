@@ -28,9 +28,9 @@ public class HomeController {
         return "about";
     }
 
-    @RequestMapping("/home.html")
+    @RequestMapping("/index.html")
     public String home(){
-        return "home";
+        return "index";
     }
 
     @RequestMapping("/contact.html")
@@ -38,12 +38,12 @@ public class HomeController {
         return "contact";
     }
 
-    @RequestMapping("/pricing.html")
+    @RequestMapping("/board.html")
     public String pricing(){
-        return "pricing";
+        return "board";
     }
 
-    @RequestMapping("/FAQ.html")
+    @RequestMapping("/faq.html")
     public String faq(){
         return "faq";
     }
@@ -57,16 +57,6 @@ public class HomeController {
     @RequestMapping("/blog-post.html")
     public String blogPost(){
         return "blog-post";
-    }
-
-    @RequestMapping("/portfolio-item.html")
-    public String portfolioItem(){
-        return "portfolio-item";
-    }
-
-    @RequestMapping("/portfolio-overview.html")
-    public String portfolioOverview(){
-        return "portfolio-overview";
     }
 
 }

@@ -16,12 +16,10 @@
 * **BackEnd**
   * Spring Boot
   * Hibernate
-
+  * MySQL
   
 * **FrontEnd**
-  * HTML
-  * CSS
-  * JavaScript
+  * BootStrap
 
 
 * **Test**
