@@ -14,6 +14,6 @@ public class HomeController {
         Date now = new Date();
         String nowDate = now.toString();
         model.addAttribute("nowDate", nowDate);
-        return "home";
+        return "index";
     }
 }
