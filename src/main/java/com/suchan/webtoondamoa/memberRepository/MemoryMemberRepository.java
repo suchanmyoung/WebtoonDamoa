@@ -8,19 +8,17 @@ import java.util.*;
 @Repository
 public class MemoryMemberRepository  implements MemberRepository{
 
+private static Map<String, Member> memberStore = new HashMap();
+
+
     @Override
-    public Member save(Member member) {
-        List<Member> members = new ArrayList<>();
-        members.add(member);
-        for(int i=0; i<members.size(); i++) {
-            System.out.println("새 멤버는 + " + members.get(i).getName() + "입니다.");
-        }
-        return member;
+    public void save(Member member) {
+        memberStore.put(member.getId(), member);
     }
 
     @Override
-    public Optional<Member> findById(Long id) {
-        return null;
+    public Member findById(String id) {
+        return memberStore.get(id);
     }
 
     @Override

@@ -8,8 +8,16 @@ public class Member {
     private String pw;
     private String name;
     private String email;
+
     // email의 정규표현식 == \w+@\w+\.\w+(\.\w+)?
 
+
+    public Member(String id, String pw, String name, String email) {
+        this.id = id;
+        this.pw = pw;
+        this.name = name;
+        this.email = email;
+    }
 
     public String getId() {
         return id;

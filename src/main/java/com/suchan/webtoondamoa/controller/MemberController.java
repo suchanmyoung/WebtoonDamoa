@@ -1,12 +1,11 @@
 package com.suchan.webtoondamoa.controller;
 
 import com.suchan.webtoondamoa.domain.Member;
-import com.suchan.webtoondamoa.memberRepository.MemberRepository;
 import com.suchan.webtoondamoa.memberRepository.MemoryMemberRepository;
-import com.suchan.webtoondamoa.memberService.MemberService;
+import com.suchan.webtoondamoa.service.memberService.MemberService;
+import com.suchan.webtoondamoa.service.memberService.MemberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -18,6 +17,8 @@ public class MemberController {
 
     private final MemoryMemberRepository memberRepository;
 
+    private final MemberService memberService = new MemberServiceImpl();
+
 
     @RequestMapping("/signup.html")
     public String signUp(){
@@ -27,12 +28,7 @@ public class MemberController {
 
     @PostMapping("/members/new")
     public String create(Member signup){
-        Member member = new Member();
-        member.setId(signup.getId());
-        member.setPw(signup.getPw());
-        member.setName(signup.getName());
-        member.setEmail(signup.getEmail());
-        memberRepository.save(member);
+        memberService.join(signup);
         return "redirect:/";
     }
 
