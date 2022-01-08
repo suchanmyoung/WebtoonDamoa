@@ -1,7 +1,7 @@
 package com.suchan.webtoondamoa.controller;
 
 import com.suchan.webtoondamoa.domain.Member;
-import com.suchan.webtoondamoa.memberRepository.MemoryMemberRepository;
+import com.suchan.webtoondamoa.memberRepository.MemberRepositoryImpl;
 import com.suchan.webtoondamoa.service.memberService.MemberService;
 import com.suchan.webtoondamoa.service.memberService.MemberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
 
     @Autowired
-    public MemberController(MemoryMemberRepository memberRepository){this.memberRepository=memberRepository;}
+    public MemberController(MemberRepositoryImpl memberRepository){this.memberRepository=memberRepository;}
 
-    private final MemoryMemberRepository memberRepository;
+    private final MemberRepositoryImpl memberRepository;
 
     private final MemberService memberService = new MemberServiceImpl();
 

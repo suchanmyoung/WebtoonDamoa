@@ -2,13 +2,11 @@ package com.suchan.webtoondamoa.service.memberService;
 
 import com.suchan.webtoondamoa.domain.Member;
 import com.suchan.webtoondamoa.memberRepository.MemberRepository;
-import com.suchan.webtoondamoa.memberRepository.MemoryMemberRepository;
-
-import java.util.Optional;
+import com.suchan.webtoondamoa.memberRepository.MemberRepositoryImpl;
 
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository = new MemberRepositoryImpl();
 
     @Override
     public void join(Member member) {

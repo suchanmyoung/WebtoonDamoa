@@ -19,44 +19,23 @@ public class HomeController {
 //    }
 
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "index";
     }
 
     @GetMapping("/about.html")
-    public String about(){
+    public String about() {
         return "about";
     }
 
     @RequestMapping("/index.html")
-    public String home(){
+    public String home() {
         return "index";
     }
 
-    @RequestMapping("/contact.html")
-    public String contract(){
-        return "contact";
-    }
-
     @RequestMapping("/board.html")
-    public String pricing(){
+    public String board() {
         return "board";
-    }
-
-    @RequestMapping("/faq.html")
-    public String faq(){
-        return "faq";
-    }
-
-    @RequestMapping("/blog-home.html")
-    public String blogHome(){
-        return "blog-home.html";
-    }
-
-
-    @RequestMapping("/blog-post.html")
-    public String blogPost(){
-        return "blog-post";
     }
 
 }
