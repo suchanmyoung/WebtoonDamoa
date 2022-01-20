@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
 
     @Autowired
-    public MemberController(MemberRepositoryImpl memberRepository){this.memberRepository=memberRepository;}
+    public MemberController(MemberRepositoryImpl memberRepository, MemberServiceImpl memberService){
+        this.memberRepository=memberRepository;
+        this.memberService=memberService;
+    }
 
     private final MemberRepositoryImpl memberRepository;
-
-    private final MemberService memberService = new MemberServiceImpl();
+    private final MemberServiceImpl memberService;
 
 
     @RequestMapping("/signup.html")
