@@ -1,53 +1,21 @@
 package com.suchan.webtoondamoa.domain;
 
 
-//@Entity
+import lombok.Data;
+
+@Data
 public class Member {
 
-    private String id;
+    private Long id;
+    private String loginId;
     private String pw;
     private String name;
     private String email;
 
-    // email의 정규표현식 == \w+@\w+\.\w+(\.\w+)?
-
-
-    public Member(String id, String pw, String name, String email) {
-        this.id = id;
+    public Member(String loginId, String pw, String name, String email) {
+        this.loginId = loginId;
         this.pw = pw;
         this.name = name;
-        this.email = email;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getPw() {
-        return pw;
-    }
-
-    public void setPw(String pw) {
-        this.pw = pw;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
     }
 }
