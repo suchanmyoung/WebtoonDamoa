@@ -10,14 +10,6 @@ import java.util.Date;
 @Controller
 public class HomeController {
 
-//    @GetMapping("/")
-//    public String index(Model model){
-//        Date now = new Date();
-//        String nowDate = now.toString();
-//        model.addAttribute("nowDate", nowDate);
-//        return "home";
-//    }
-
     @RequestMapping("/")
     public String index() {
         return "index";
