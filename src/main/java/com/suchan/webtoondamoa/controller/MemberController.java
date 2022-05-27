@@ -2,9 +2,7 @@ package com.suchan.webtoondamoa.controller;
 
 import com.suchan.webtoondamoa.domain.Member;
 import com.suchan.webtoondamoa.memberRepository.MemberRepository;
-import com.suchan.webtoondamoa.memberRepository.MemberRepositoryImpl;
 import com.suchan.webtoondamoa.service.memberService.MemberService;
-import com.suchan.webtoondamoa.service.memberService.MemberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
